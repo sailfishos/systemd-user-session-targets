@@ -1,0 +1,7 @@
+# pre-user-session.target - a virtual middleware target
+# This happens before user-session
+
+[Unit]
+Description=Pre user session
+Requires=dbus.socket
+AllowIsolate=yes

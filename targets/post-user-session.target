@@ -1,0 +1,10 @@
+# post-user-session.target - a virtual target
+# This happens after user-session
+# Any services belonging to this target group shoud define
+# After=user-session.target
+
+[Unit]
+Description=Post user session
+After=user-session.target
+Requires=user-session.target
+AllowIsolate=yes

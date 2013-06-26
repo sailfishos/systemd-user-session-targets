@@ -1,0 +1,9 @@
+# user-session.target - a virtual target for the Mobile UI
+# Any services belonging to this target group shoud define
+# After=pre-user-session.target
+
+[Unit]
+Description=User session
+After=pre-user-session.target
+Requires=pre-user-session.target
+AllowIsolate=yes
