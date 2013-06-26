@@ -24,7 +24,6 @@ mkdir -p %{buildroot}%{_libdir}/systemd/user/post-user-session.target.wants/
 mkdir -p %{buildroot}%{_libdir}/systemd/user/actdead-session.target.wants/
 
 # targets
-#ln -sf post-user-session.target %{buildroot}%{_libdir}/systemd/user/default.target
 install -m 0644 targets/pre-user-session.target %{buildroot}%{_libdir}/systemd/user/
 install -m 0644 targets/user-session.target %{buildroot}%{_libdir}/systemd/user/
 install -m 0644 targets/post-user-session.target %{buildroot}%{_libdir}/systemd/user/
@@ -32,7 +31,6 @@ install -m 0644 targets/actdead-session.target %{buildroot}%{_libdir}/systemd/us
 
 %files
 %defattr(-,root,root,-)
-#%{_libdir}/systemd/user/default.target
 %dir %{_libdir}/systemd/user/pre-user-session.target.wants
 %dir %{_libdir}/systemd/user/user-session.target.wants
 %dir %{_libdir}/systemd/user/post-user-session.target.wants
