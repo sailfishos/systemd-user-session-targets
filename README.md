@@ -12,10 +12,10 @@ user session should do following:
 
         [Unit]
         After=pre-user-session.target
-	[Service]
-	ExecStart=/path/to/app-executable
-	[Install]
-	WantedBy=user-session.target
+        [Service]
+        ExecStart=/path/to/app-executable
+        [Install]
+        WantedBy=user-session.target
 
 *   In .spec file have
 
