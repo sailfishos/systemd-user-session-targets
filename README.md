@@ -20,8 +20,8 @@ user session should do following:
 *   In .spec file have
 
         Requires: systemd-user-session-targets
-        BuildRequires: systemd-user-session-targets
 
     and in install section create link to service file
 
+        mkdir -p %{buildroot}%{_libdir}/systemd/user/user-session.target.wants  
         ln -s ../<my-app>.service %{buildroot}%{_libdir}/systemd/user/user-session.target.wants/
