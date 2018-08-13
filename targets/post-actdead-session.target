@@ -1,0 +1,7 @@
+# post-atcdead-session.target - a virtual target for the charging only post state
+
+[Unit]
+Description=Post actdead
+After=actdead-session.target
+Requires=actdead-session.target
+AllowIsolate=yes

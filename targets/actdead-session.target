@@ -4,4 +4,5 @@
 Description=Actdead
 After=pre-user-session.target
 Requires=pre-user-session.target
+Wants=post-actdead-session.target
 AllowIsolate=yes

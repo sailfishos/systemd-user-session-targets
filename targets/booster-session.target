@@ -1,0 +1,8 @@
+# booster-session.target - a virtual booster session target
+
+[Unit]
+Description=Booster session
+After=basic.target
+Requires=basic.target
+Before=pre-user-session.target
+AllowIsolate=yes

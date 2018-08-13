@@ -1,6 +1,6 @@
 Name:       systemd-user-session-targets
 Summary:    Basic targets for systemd user session
-Version:    0.1
+Version:    0.0.2
 Release:    1
 BuildArch:  noarch
 Group:      System/Libraries
@@ -22,12 +22,16 @@ mkdir -p %{buildroot}%{_libdir}/systemd/user/pre-user-session.target.wants/
 mkdir -p %{buildroot}%{_libdir}/systemd/user/user-session.target.wants/
 mkdir -p %{buildroot}%{_libdir}/systemd/user/post-user-session.target.wants/
 mkdir -p %{buildroot}%{_libdir}/systemd/user/actdead-session.target.wants/
+mkdir -p %{buildroot}%{_libdir}/systemd/user/post-actdead-session.target.wants/
+mkdir -p %{buildroot}%{_libdir}/systemd/user/booster-session.target.wants/
 
 # targets
 install -m 0644 targets/pre-user-session.target %{buildroot}%{_libdir}/systemd/user/
 install -m 0644 targets/user-session.target %{buildroot}%{_libdir}/systemd/user/
 install -m 0644 targets/post-user-session.target %{buildroot}%{_libdir}/systemd/user/
 install -m 0644 targets/actdead-session.target %{buildroot}%{_libdir}/systemd/user/
+install -m 0644 targets/post-actdead-session.target %{buildroot}%{_libdir}/systemd/user/
+install -m 0644 targets/booster-session.target %{buildroot}%{_libdir}/systemd/user/
 
 %files
 %defattr(-,root,root,-)
@@ -35,8 +39,11 @@ install -m 0644 targets/actdead-session.target %{buildroot}%{_libdir}/systemd/us
 %dir %{_libdir}/systemd/user/user-session.target.wants
 %dir %{_libdir}/systemd/user/post-user-session.target.wants
 %dir %{_libdir}/systemd/user/actdead-session.target.wants
+%dir %{_libdir}/systemd/user/post-actdead-session.target.wants
+%dir %{_libdir}/systemd/user/booster-session.target.wants
 %{_libdir}/systemd/user/pre-user-session.target
 %{_libdir}/systemd/user/user-session.target
 %{_libdir}/systemd/user/post-user-session.target
 %{_libdir}/systemd/user/actdead-session.target
-
+%{_libdir}/systemd/user/post-actdead-session.target
+%{_libdir}/systemd/user/booster-session.target
