@@ -4,9 +4,9 @@ Version:    0.0.2
 Release:    1
 BuildArch:  noarch
 License:    BSD
-Url:        https://git.sailfishos.org/mer-core/systemd-user-session-targets
+Url:        https://github.com/sailfishos/systemd-user-session-targets
 Source0:    %{name}-%{version}.tar.gz
-BuildRequires: systemd
+BuildRequires: pkgconfig(systemd)
 Requires: systemd
 
 %description
